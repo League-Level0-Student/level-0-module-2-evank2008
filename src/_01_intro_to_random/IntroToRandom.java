@@ -10,8 +10,7 @@ public class IntroToRandom {
 		
 		int num = 0;
 		
-		//3   Now to make num random. 
-		//3a. Create an object of the Random class, Hint: Random ran = new Random()
+		
 		Random random = new Random();
 		
 		num=random.nextInt(-222 - 76);
