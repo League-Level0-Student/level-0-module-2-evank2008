@@ -19,23 +19,29 @@ public class SafeCracker {
 	 * *****************/
 	boolean canPlaySounds = true;
 	
-	
 	public static void main(String[] args) {
-		new SafeCracker().crackTheSafe();
+		SafeCracker sc = new SafeCracker();
+		sc.crackTheSafe();
 	}
 
+	
 	void crackTheSafe() {
+		JOptionPane.showMessageDialog(null, "Oh no! The safe is locked!");
+		JOptionPane.showMessageDialog(null, "Initialize safecracker?");
 		/*
 		 * Your mission: use the tryCode method to crack the safe by trying all possible
 		 * combinations
-		 */		
-
+		 */	
+		
+for(int i = 0; true; i++) {
+	tryCode(i);
+}
 	}
 
 	 void tryCode(int guess) {
 		System.out.println("trying " + guess);
 
-		int secretCode = 9999999 - wekncrzpasfdkjhcfjse;
+		int secretCode = 9999999 - new Random().nextInt(9999990);;
 
 		if (guess == secretCode) {
 			JOptionPane.showMessageDialog(null, "Congratulations! You cracked the safe with " + guess);
@@ -63,5 +69,5 @@ public class SafeCracker {
 		}
 	}
 
-	final int wekncrzpasfdkjhcfjse = new Random().nextInt(100);
+	
 }
